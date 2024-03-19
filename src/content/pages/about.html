@@ -15,61 +15,248 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
+<div id="banner-1400">
+    <div class="cs-container">
+        <span class="cs-int-title">About Us</span>
+        <div class="cs-breadcrumbs">
+            <a href="" class="cs-link">Home</a>
+            <a href="" class="cs-link cs-active">About</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/indyscape.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/indyscape.jpg">
+        <img decoding="async" src="/assets/images/indyscape.jpg" alt="indy scape" width="1280" height="568" aria-hidden="true">
+    </picture>
+</div>
+                                
+  <!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
 
-    </section>
+<section id="sbs-1095">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Top left image-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/mancomputer.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/mancomputer.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/mancomputer.jpg" alt="mechanic" width="542" height="608">
+            </picture>
+            <!--Eclipses-->
+            <img class="cs-graphic" loading="lazy" decoding="async" src="/assets/svgs/eclipses.svg" alt="profile" width="184" height="184" aria-hidden="true">
+            <!--Stripe background-->
+            <img class="cs-stripes" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/stripes-long.svg" alt="stripes" width="522" height="608" aria-hidden="true">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Great Lakes Web Designs</span>
+            <h2 class="cs-title">Giving Small Businesses <br> The Big Business Treatment</h2>
+            <p class="cs-text">
+                Having honed our skills for, more than a decade, We are the best at developing websites tailored to businesses we have acquired knowledge on effective approaches. Our goal is to deliver to you an top quality website that resonates well within your local community.
+            </p>
+            <ul class="cs-list">
+                <li class="cs-li">We'll fill your website with SEO-optimized content, ensuring maximum visibility.</li>
+                <li class="cs-li">Get your brand new site up and running in under 3 weeks.</li>
+                <li class="cs-li">Enjoy swift updates and edits</li>
+                <li class="cs-li">Our custom branded designs seamlessly integrate with your logo and colors.</li>
+                <li class="cs-li">Our main goal is to draw in customers.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Steps                      -->
+<!-- ============================================ -->
 
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+<section id="steps-1209">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">How we work</span>
+            <h2 class="cs-title">How We Work for You</h2>
+            <p class="cs-text">In the new era of technology we look in the future with certainty and for any post types, or just they are so much great of all to a program.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-number">01</span>
+                <h3 class="cs-h3">Original Content Tailored to You</h3>
+                <p class="cs-item-text">
+                    Experience our unique and captivating content crafted specifically for your company. Embrace your distinctiveness!
                 </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">02</span>
+                <h3 class="cs-h3">Personalized Customer Support</h3>
+                <p class="cs-item-text">
+                    No automated responses here - our lead developer is just a call away whenever you need assistance.</p>
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">03</span>
+                <h3 class="cs-h3">Save Big & Grow Faster</h3>
+                <p class="cs-item-text">
+                    Boost your savings significantly. Accelerate your progress, with our cutting edge solutions. Achieve success without sacrificing your budget.
                 </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--                  Pricing                     -->
+<!-- ============================================ -->
+
+<section id="pricing-1387">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Pricing</span>
+            <h2 class="cs-title">Flexible Pricing Plans for Your Tailored Needs</h2>
+            <p class="cs-text">
+                In the new era of technology we look in the future with certainty and for any post types, or just they are so much great of all to a program.
+            </p>
+            <div class="cs-toggle-group">
+                <span id="cs-option1-1387" class="cs-plan">Pay Monthly</span>
+                <div class="cs-toggle" aria-label="click to switch plans pricing">
+                    <span aria-hidden="true" class="cs-toggle-switch"></span>
                 </div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
+                <span id="cs-option2-1387" class="cs-plan">Lump Sum</span>
             </div>
         </div>
-    </section>
+        <ul class="cs-card-group cs-option1">
+            <li class="cs-item cs-popular">
+                <div class="cs-flex">
+                    <span class="cs-package">Standard Deal</span>
+                    <span class="cs-price">
+                        $175
+                        <span class="cs-duration">/Month</span>
+                    </span>
+                    <div class="cs-tag">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                        Hot Deal
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <ul class="cs-ul">
+                        <li class="cs-li">6 Month Contract</li>
+                        <li class="cs-li">5 Page Design & Development</li>
+                        <li class="cs-li">Mobile-Optimized</li>
+                        <li class="cs-li">Free Custom Domain</li>
+                        <li class="cs-li">Best Hosting</li>
+                        <li class="cs-li">Happy Customers</li>
+                    </ul>
+                    <a href="" class="cs-button-transparent">Get Now</a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">Extended Deal</span>
+                    <span class="cs-price">
+                        $165
+                        <span class="cs-duration">/Month</span>
+                    </span>
+                    <div class="cs-tag">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                        Hot Deal
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <ul class="cs-ul">
+                        <li class="cs-li">12 Month Contract</li>
+                        <li class="cs-li">5 Page Design & Development</li>
+                        <li class="cs-li">Mobile-Optimized</li>
+                        <li class="cs-li">Free Custom Domain</li>
+                        <li class="cs-li">Best Hosting</li>
+                        <li class="cs-li">Happy Customers</li>
+                    </ul>
+                    <a href="" class="cs-button-transparent">Read More</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="cs-card-group cs-option2">
+            <li class="cs-item cs-popular">
+                <div class="cs-flex">
+                    <span class="cs-package">Standard</span>
+                    <span class="cs-price">
+                        $2,500
+                    </span>
+                    <div class="cs-tag">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                        Hot Deal
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <ul class="cs-ul">
+                        <li class="cs-li">Mobile-Optimized</li>
+                        <li class="cs-li">Free Custom Domain</li>
+                        <li class="cs-li">Best Hosting</li>
+                        <li class="cs-li">Outstanding Support</li>
+                        <li class="cs-li">Happy Customers</li>
+                    </ul>
+                    <a href="" class="cs-button-transparent">Get Now</a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <div class="cs-flex">
+                    <span class="cs-package">E-Commerce</span>
+                    <span class="cs-price">
+                        $6,000
+                    </span>
+                    <div class="cs-tag">
+                        <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/fire.svg" decoding="async" alt="fire" width="16" height="16" loading="true">
+                        Hot Deal
+                    </div>
+                </div>
+                <div class="cs-info">
+                    <ul class="cs-ul">
+                        <li class="cs-li">$6000 min. Up Front Cost</li>
+                        <li class="cs-li">Custom Designed</li>
+                        <li class="cs-li">Custom Coded Shopify Integration</li>
+                        <li class="cs-li">Easy to edit</li>
+                    </ul>
+                    <a href="" class="cs-button-transparent">Read More</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+  
+<script>
+    const leftOption = document.querySelector("#pricing-1387 #cs-option1-1387");
+        const rightOption = document.querySelector("#pricing-1387 #cs-option2-1387");
+        const toggle = document.querySelector("#pricing-1387 .cs-toggle");
+        const cardGroup = Array.from(document.querySelectorAll('#pricing-1387 .cs-card-group'))
+        // when you click the middle toggle
+        toggle.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.toggle("cs-active");
+            }
+            toggle.classList.toggle("active");
+        });       
+        // when you click the left button option
+        leftOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.remove("cs-active");
+            }
+            toggle.classList.remove("active");
+        });    
+        // when you click the right button option
+        rightOption.addEventListener('click', (e) => { 
+            for (const item of cardGroup) {
+                item.classList.add("cs-active");
+            }
+            toggle.classList.add("active");
+        });
+                                
+</script>
 
     {% include 'components/cta.html' %}
 

@@ -1,388 +1,930 @@
-/* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---         Services           -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #sbs {
+@media only screen and (min-width: 0rem) {
+  #services-1378 {
     padding: var(--sectionPadding);
+    padding-top: 16.25rem;
   }
-  #sbs .cs-container {
+  #services-1378 .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #services-1378 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #services-1378 .cs-topper {
+    color: #0077C0;
+  }
+  #services-1378 .cs-content {
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+  #services-1378 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2vw, 1.25rem);
+    /* 72px - 84px */
+    row-gap: clamp(4.5rem, 6vw, 5.25rem);
+  }
+  #services-1378 .cs-item {
+    /* change to left if you want text aligned to the left */
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    /* 210px - 305px */
+    min-height: clamp(13.125rem, 30vw, 19.0625rem);
+    margin: 0;
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    /* 16px - 40px */
+    padding: clamp(1rem, 3vw, 2.5rem);
+    padding-top: 0;
+    background-color: #f4f4f4;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s;
+  }
+  #services-1378 .cs-item:hover {
+    background-color: var(--primary);
+  }
+  #services-1378 .cs-item:hover .cs-picture {
+    background-color: var(--primary);
+  }
+  #services-1378 .cs-item:hover .cs-icon,
+  #services-1378 .cs-item:hover .cs-arrow {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #services-1378 .cs-item:hover .cs-h3,
+  #services-1378 .cs-item:hover .cs-item-text {
+    color: #fff;
+  }
+  #services-1378 .cs-item:hover .cs-item-text {
+    opacity: 0.8;
+  }
+  #services-1378 .cs-item:hover .cs-link {
+    border-color: #fff;
+  }
+  #services-1378 .cs-picture {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin: -2.75rem 0 clamp(1.75rem, 3vw, 2.25rem) 0;
+    box-sizing: border-box;
+    background-color: #bababa;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    row-gap: 2.5rem;
+    transition: 0.3s background-color;
   }
-  #sbs .cs-left {
-    /* scaling the font size with the view width */
-    font-size: min(2.31vw, 0.7em);
-    /* using ems so we can use font size to scale the whole section */
-    width: 39.4375em;
-    height: 39.75em;
-    position: relative;
+  #services-1378 .cs-icon {
+    width: 2rem;
+    height: auto;
+    transition: filter 0.3s;
   }
-  #sbs .cs-picture {
-    border-radius: 1.5em;
-    display: block;
-    position: absolute;
-    /* clips img tag corners */
-    overflow: hidden;
-  }
-  #sbs .cs-picture img {
-    width: 100%;
-    height: 100%;
-    /* makes image act like a background image */
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #sbs .cs-picture1 {
-    width: 32.625em;
-    height: 36.3125em;
-    top: 0;
-    left: 0;
-  }
-  #sbs .cs-picture2 {
-    width: 25.875em;
-    height: 25em;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-    right: 0;
-    bottom: 0;
-  }
-  #sbs .cs-right {
-    max-width: 33.875rem;
-    margin: auto;
-  }
-  #sbs .cs-topper {
-    text-align: left;
-    margin-bottom: 0.25rem;
-  }
-  #sbs .cs-title {
-    text-align: left;
-    max-width: 50rem;
-  }
-  #sbs .cs-text {
-    text-align: left;
-    max-width: 46.875rem;
-    margin-bottom: 1rem;
-  }
-  #sbs .cs-text:last-of-type {
-    margin-bottom: 2rem;
-  }
-  #sbs .cs-flex-group {
-    /* 16px - 32px */
-    padding: clamp(1rem, 3vw, 2rem);
-    background-color: #f7f7f7;
-    border-radius: 1rem;
-    position: relative;
-  }
-  #sbs .cs-flex-p {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0 0 1rem;
-    color: #353535;
-  }
-  #sbs .cs-name {
-    font-size: 1rem;
+  #services-1378 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
     font-weight: bold;
     line-height: 1.2em;
-    text-transform: uppercase;
-    margin: 0 0 0.25rem;
-    color: var(--headerColor);
-    display: block;
+    text-align: inherit;
+    /* if a word is too long for the card, break it onto a new line */
+    word-break: break-word;
+    margin: 0 0 0.75rem;
+    transition: color 0.3s;
   }
-  #sbs .cs-job {
-    font-size: 0.875rem;
+  #services-1378 .cs-item-text {
+    font-size: 1rem;
     line-height: 1.5em;
-    color: #353535;
-    display: block;
+    text-align: inherit;
+    margin: 0 0 2rem;
+    color: var(--bodyTextColor);
+    transition: 0.3s color;
   }
-  #sbs .cs-quote-icon {
-    /* 60px - 136px */
-    width: clamp(3.75rem, 10vw, 8.5rem);
-    height: auto;
-    position: absolute;
-    /* 16px - 32px */
-    right: clamp(1rem, 4vw, 2rem);
-    bottom: 0rem;
+  #services-1378 .cs-link {
+    text-decoration: none;
+    width: 4rem;
+    height: 4rem;
+    color: var(--headerColor);
+    border: 1px solid #bababa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents the parent flexbox from shrinking the arrow */
+    flex-shrink: 0;
+    gap: 0.625rem;
+    transition: border-color 0.3s;
   }
-  #sbs .cs-button-solid {
-    margin-top: 2rem;
+  #services-1378 .cs-arrow {
+    width: auto;
+    height: 0.75rem;
+    transition: filter 0.3s;
+  }
+}
+/* Tablet - 600px */
+@media only screen and (min-width: 48rem) {
+  #services-1378 .cs-item {
+    grid-column: span 6;
+    padding-top: clamp(8.25rem, 3vw, 16.25rem);
   }
 }
 /* Desktop - 1024px */
-@media only screen and (min-width: 64em) {
-  #sbs .cs-container {
-    flex-flow: row;
-    justify-content: space-between;
-    gap: 3.25rem;
-  }
-  #sbs .cs-left {
-    font-size: min(1.2vw, 1em);
-    flex: none;
-  }
-  #sbs .cs-right {
-    margin: 0;
+@media only screen and (min-width: 64rem) {
+  #services-1378 .cs-item {
+    grid-column: span 4;
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #sbs .cs-left:before,
-  body.dark-mode #sbs .cs-left:after {
-    background: var(--accent);
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #services-1378 .cs-item {
+    background-color: var(--medium);
   }
-  body.dark-mode #sbs .cs-picture2 {
-    background-color: var(--dark);
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-  }
-  body.dark-mode #sbs .cs-topper {
-    color: var(--primaryLight);
-  }
-  body.dark-mode #sbs .cs-title,
-  body.dark-mode #sbs .cs-text,
-  body.dark-mode #sbs .cs-h3,
-  body.dark-mode #sbs .cs-flex-p,
-  body.dark-mode #sbs .cs-name {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #sbs .cs-flex-group {
+  body.dark-mode #services-1378 .cs-item:hover {
     background-color: var(--accent);
   }
-  body.dark-mode #sbs .cs-job {
+  body.dark-mode #services-1378 .cs-item:hover .cs-icon,
+  body.dark-mode #services-1378 .cs-item:hover .cs-arrow {
+    filter: grayscale(1) brightness(1000%);
+  }
+  body.dark-mode #services-1378 .cs-item:hover .cs-h3 {
+    color: #fff;
+  }
+  body.dark-mode #services-1378 .cs-item:hover .cs-arrow-wrapper {
+    border-color: #fff;
+  }
+  body.dark-mode #services-1378 .cs-title,
+  body.dark-mode #services-1378 .cs-text,
+  body.dark-mode #services-1378 .cs-h3,
+  body.dark-mode #services-1378 .cs-item-text {
     color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #services-1378 .cs-text,
+  body.dark-mode #services-1378 .cs-item-text {
     opacity: 0.8;
   }
-  body.dark-mode #sbs .cs-quote-icon {
-    opacity: 0.2;
+  body.dark-mode #services-1378 .cs-picture {
+    background-color: var(--accent);
+  }
+  body.dark-mode #services-1378 .cs-icon {
+    filter: grayscale(1) brightness(1000%);
   }
 }
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---            CTA             -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #sbs-r {
+@media only screen and (min-width: 0rem) {
+  #cta-403 {
     padding: var(--sectionPadding);
+    position: relative;
   }
-  #sbs-r .cs-container {
+  #cta-403 .cs-background {
+    width: 100%;
+    height: 100%;
+    background-blend-mode: multiply;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #cta-403 .cs-background:before {
+    /* background color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #cta-403 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes img tag act as a background image */
+    object-fit: cover;
+    /* positions the image inside the parent */
+    object-position: 0% 30%;
+  }
+  #cta-403 .cs-container {
     width: 100%;
     max-width: 80rem;
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    row-gap: 2.5rem;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #sbs-r .cs-left {
-    /* scaling the font size with the view width */
-    font-size: min(2.31vw, 0.7em);
-    /* using ems so we can use font size to scale the whole section */
-    width: 39.4375em;
-    height: 39.75em;
+  #cta-403 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    max-width: 32.3125rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #cta-403 .cs-title,
+  #cta-403 .cs-text {
+    color: #ffffff;
+  }
+  #cta-403 .cs-text {
+    opacity: 0.8;
+    margin-bottom: 1rem;
+  }
+  #cta-403 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #cta-403 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    padding: 0 3rem;
+    border-radius: 1.875rem;
+    background-color: var(--primary);
+    display: inline-block;
     position: relative;
+    z-index: 1;
+    transition: color 0.3s;
   }
-  #sbs-r .cs-picture {
-    border-radius: 1.5em;
-    display: block;
+  #cta-403 .cs-button-solid:before {
+    content: '';
     position: absolute;
-    /* clips img tag corners */
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #000000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #cta-403 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #cta-403 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cta-403 .cs-background {
+    /* clips the black slant so it doesnt overflow */
     overflow: hidden;
   }
-  #sbs-r .cs-picture img {
+  #cta-403 .cs-background:before {
+    width: 40%;
+    opacity: 1;
+  }
+  #cta-403 .cs-background:after {
+    /* black slant */
+    content: "";
+    width: 31.25rem;
+    height: 93.75rem;
+    margin-right: -3.125rem;
+    background: -moz-linear-gradient(left, #1a1a1a 0%, #1a1a1a 57%, rgba(26, 26, 26, 0) 100%);
+    background: -webkit-linear-gradient(left, #1a1a1a 0%, #1a1a1a 57%, rgba(26, 26, 26, 0) 100%);
+    background: linear-gradient(to right, #1a1a1a 0%, #1a1a1a 57%, rgba(26, 26, 26, 0) 100%);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 50%;
+    transform: rotate(10deg) translateY(-50%);
+  }
+  #cta-403 .cs-background img {
+    width: 60%;
+    object-position: right;
+    left: auto;
+    right: 0;
+  }
+  #cta-403 .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #cta-403 .cs-content {
+    text-align: left;
+    align-items: flex-start;
+    width: 45%;
+  }
+  #cta-403 .cs-text,
+  #cta-403 .cs-title {
+    margin-left: 0;
+  }
+}
+/*-- -------------------------- -->
+<---        Why Choose          -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes floatAnimation2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  #why-choose-1371 {
+    padding: var(--sectionPadding);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  #why-choose-1371 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #why-choose-1371 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #why-choose-1371 .cs-title {
+    max-width: 23ch;
+  }
+  #why-choose-1371 .cs-text {
+    max-width: 52.5rem;
+    margin-bottom: 1rem;
+  }
+  #why-choose-1371 .cs-text:last-of-type {
+    margin-bottom: 0rem;
+  }
+  #why-choose-1371 .cs-text strong {
+    color: var(--headerColor);
+  }
+  #why-choose-1371 .cs-item-picture {
+    list-style: none;
+    width: 100%;
+    grid-column: span 12;
+    position: relative;
+  }
+  #why-choose-1371 .cs-picture {
+    width: 100%;
+    height: 26.125rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #why-choose-1371 .cs-picture img {
     width: 100%;
     height: 100%;
-    /* makes image act like a background image */
     object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
   }
-  #sbs-r .cs-picture1 {
-    width: 32.625em;
-    height: 36.3125em;
-    top: 0;
-    right: 0;
+  #why-choose-1371 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: stretch6;
+    gap: clamp(1rem, 2vw, 1.25rem);
   }
-  #sbs-r .cs-picture2 {
-    width: 25.875em;
-    height: 25em;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-    bottom: 0;
-    left: 0;
-  }
-  #sbs-r .cs-right {
-    max-width: 33.875rem;
-    margin: auto;
-  }
-  #sbs-r .cs-topper {
-    text-align: left;
-    margin-bottom: 0.25rem;
-  }
-  #sbs-r .cs-title {
-    text-align: left;
-    max-width: 50rem;
-  }
-  #sbs-r .cs-text {
-    text-align: left;
-    max-width: 46.875rem;
-    margin-bottom: 1rem;
-  }
-  #sbs-r .cs-text:last-of-type {
-    margin-bottom: 2rem;
-  }
-  #sbs-r .cs-flex-group {
-    /* 16px - 32px */
-    padding: clamp(1rem, 3vw, 2rem);
+  #why-choose-1371 .cs-item {
+    list-style: none;
+    /* 16px - 24px */
+    padding: clamp(1rem, 3vw, 1.5rem);
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
     background-color: #f7f7f7;
     border-radius: 1rem;
-    position: relative;
+    border: 1px solid #e8e8e8;
+    display: flex;
+    grid-column: span 12;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    transition: background-color 0.3s;
   }
-  #sbs-r .cs-flex-p {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.5vw, 1rem);
-    line-height: 1.5em;
-    margin: 0 0 1rem;
-    color: #353535;
+  #why-choose-1371 .cs-item:hover {
+    background-color: var(--primary);
   }
-  #sbs-r .cs-name {
-    font-size: 1rem;
-    font-weight: bold;
+  #why-choose-1371 .cs-item:hover .cs-h3,
+  #why-choose-1371 .cs-item:hover .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  #why-choose-1371 .cs-item:hover .cs-item-text {
+    opacity: 0.8;
+  }
+  #why-choose-1371 .cs-item:hover .cs-h3-icon {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #why-choose-1371 .cs-h3 {
+    font-size: 1.25rem;
     line-height: 1.2em;
-    text-transform: uppercase;
-    margin: 0 0 0.25rem;
+    font-weight: 700;
+    margin: 0;
     color: var(--headerColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.5rem;
+    transition: color 0.3s;
+  }
+  #why-choose-1371 .cs-h3-icon {
+    width: 1.5rem;
+    height: auto;
+    margin-top: 2px;
     display: block;
   }
-  #sbs-r .cs-job {
+  #why-choose-1371 .cs-item-text {
     font-size: 0.875rem;
     line-height: 1.5em;
-    color: #353535;
-    display: block;
+    margin: 0;
+    color: var(--bodyTextColor);
+    transition: color 0.3s, opacity 0.3s;
   }
-  #sbs-r .cs-quote-icon {
-    /* 60px - 136px */
-    width: clamp(3.75rem, 10vw, 8.5rem);
-    height: auto;
+  #why-choose-1371 .cs-button-solid {
+    font-size: 1rem;
+    line-height: 3.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    padding: 0 3rem;
+    border-radius: 1.875rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #why-choose-1371 .cs-button-solid:before {
+    content: "";
     position: absolute;
-    /* 16px - 32px */
-    right: clamp(1rem, 4vw, 2rem);
-    bottom: 0rem;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #1a1a1a;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #why-choose-1371 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #why-choose-1371 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #why-choose-1371 .cs-bubbles1 {
+    width: 26.1875rem;
+    height: 26.6875rem;
+    position: absolute;
+    left: -16.25rem;
+    top: -15rem;
+    z-index: -1;
+  }
+  #why-choose-1371 .cs-bubbles1:before {
+    /* white border bubble */
+    content: "";
+    width: 20.625rem;
+    height: 20.625rem;
+    background: transparent;
+    border: 1px solid #1a1a1a;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    animation-name: floatAnimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #why-choose-1371 .cs-bubbles1:after {
+    /* orange bubble */
+    content: "";
+    width: 16.25rem;
+    height: 16.25rem;
+    background: var(--primary);
+    opacity: 0.1;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    animation-name: floatAnimation2;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #why-choose-1371 .cs-bubbles2 {
+    width: 26.1875rem;
+    height: 26.6875rem;
+    display: block;
+    position: absolute;
+    /* changes to 160px at larger desktop */
+    right: -11.25rem;
+    bottom: -8.75rem;
+    z-index: -1;
+  }
+  #why-choose-1371 .cs-bubbles2:before {
+    /* white border bubble */
+    content: "";
+    width: 20.625rem;
+    height: 20.625rem;
+    background: transparent;
+    border: 1px solid #1a1a1a;
+    border-radius: 50%;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    animation-name: floatAnimation;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  #why-choose-1371 .cs-bubbles2:after {
+    /* orange bubble */
+    content: "";
+    width: 16.25rem;
+    height: 16.25rem;
+    background: var(--primary);
+    opacity: 0.1;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    animation-name: floatAnimation2;
+    animation-duration: 9s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
   }
 }
-/* Desktop - 1024px */
-@media only screen and (min-width: 64em) {
-  #sbs-r .cs-container {
-    flex-flow: row;
-    justify-content: space-between;
-    gap: 3.25rem;
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #why-choose-1371 .cs-item {
+    grid-column: span 4;
   }
-  #sbs-r .cs-left {
-    font-size: min(1.2vw, 1em);
-    /* sends it to the right */
-    order: 2;
-    flex: none;
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #why-choose-1371 .cs-item-picture {
+    grid-column: 4 / span 6;
+    grid-row: 1 / span 3;
   }
-  #sbs-r .cs-right {
-    margin: 0;
+  #why-choose-1371 .cs-picture {
+    height: 100%;
+  }
+  #why-choose-1371 .cs-item {
+    grid-column: span 2;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(1) {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(2) {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(3) {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(5) {
+    grid-column: 10 / span 3;
+    grid-row: 1 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(6) {
+    grid-column: 10 / span 3;
+    grid-row: 2 / span 1;
+  }
+  #why-choose-1371 .cs-item:nth-of-type(7) {
+    grid-column: 10 / span 3;
+    grid-row: 3 / span 1;
+  }
+  #why-choose-1371 .cs-bubbles1 {
+    left: -8.125rem;
+    top: -9.375rem;
+  }
+}
+/* Large Desktop 1600px */
+@media only screen and (min-width: 100rem) {
+  #why-choose-1371 .cs-bubbles1 {
+    margin-right: 40.625rem;
+    left: auto;
+    right: 50%;
+  }
+  #why-choose-1371 .cs-bubbles2 {
+    margin-left: 37.5rem;
+    left: 50%;
+    right: auto;
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #sbs-r .cs-left:before,
-  body.dark-mode #sbs-r .cs-left:after {
-    background: var(--accent);
-  }
-  body.dark-mode #sbs-r .cs-picture2 {
-    background-color: var(--dark);
-    /* 6px - 12px */
-    border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-  }
-  body.dark-mode #sbs-r .cs-topper {
-    color: var(--primaryLight);
-  }
-  body.dark-mode #sbs-r .cs-title,
-  body.dark-mode #sbs-r .cs-text,
-  body.dark-mode #sbs-r .cs-h3,
-  body.dark-mode #sbs-r .cs-flex-p,
-  body.dark-mode #sbs-r .cs-name {
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #why-choose-1371 .cs-title,
+  body.dark-mode #why-choose-1371 .cs-text,
+  body.dark-mode #why-choose-1371 .cs-item-text {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs-r .cs-flex-group {
-    background-color: var(--accent);
+  body.dark-mode #why-choose-1371 .cs-text strong {
+    color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #sbs-r .cs-job {
+  body.dark-mode #why-choose-1371 .cs-text,
+  body.dark-mode #why-choose-1371 .cs-item-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #why-choose-1371 .cs-item {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode #why-choose-1371 .cs-item:hover {
+    background-color: var(--primary);
+  }
+  body.dark-mode #why-choose-1371 .cs-h3 {
+    color: var(--bodyTextColorWhite);
+  }
+}
+/*-- -------------------------- -->
+<---            CTA             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cta-51 {
+    padding: var(--sectionPadding);
+    position: relative;
+  }
+  #cta-51 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #cta-51 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #cta-51 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  #cta-51 .cs-text {
+    margin-bottom: 1rem;
     color: var(--bodyTextColorWhite);
     opacity: 0.8;
   }
-  body.dark-mode #sbs-r .cs-quote-icon {
-    opacity: 0.2;
+  #cta-51 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  #cta-51 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    padding: 0 2rem;
+    border-radius: 1.875rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  #cta-51 .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #000000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #cta-51 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #cta-51 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #cta-51 .cs-picture {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #cta-51 .cs-picture:before {
+    /* black color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #cta-51 .cs-picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 }
 /*-- -------------------------- -->
 <---          Gallery           -->
 <--- -------------------------- -*/
-/* Mobile - 360px - Contains hover animation */
-@media only screen and (min-width: 0em) {
-  #gallery {
-    /* Centers button */
-    text-align: center;
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes floatAnimation2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  #gallery-1374 {
     padding: var(--sectionPadding);
     position: relative;
+    z-index: 1;
     /* Prevents overflow from the image going off screen */
     overflow: hidden;
   }
-  #gallery .cs-container {
+  #gallery-1374 .cs-container {
     width: 100%;
-    max-width: 82.625em;
+    max-width: 80rem;
     margin: auto;
-  }
-  #gallery .cs-topper {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  #gallery .cs-title {
-    text-align: center;
-    max-width: 38.8125rem;
-    margin-bottom: 2.5rem;
-  }
-  #gallery .cs-image-group {
-    /* used rem so it doesn't scale with the font size of on parent */
-    font-size: min(1.1vw, 1em);
-    width: 100%;
-    max-width: 82.625em;
-    margin: 0 auto 3.75rem;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 1.875em;
-  }
-  #gallery .cs-row {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    gap: 1.875em;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
   }
-  #gallery .cs-picture {
+  #gallery-1374 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #gallery-1374 .cs-topper {
+    color: var(--secondary);
+  }
+  #gallery-1374 .cs-image-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    /* 16px - 60px */
+    gap: clamp(1rem, 4.3vw, 3.75rem);
+  }
+  #gallery-1374 .cs-link {
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #gallery-1374 .cs-item {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    grid-column: span 12;
+  }
+  #gallery-1374 .cs-item:hover .cs-h3,
+  #gallery-1374 .cs-item:hover .cs-desc {
+    color: #fff;
+  }
+  #gallery-1374 .cs-item:hover .cs-item-text {
+    background-color: var(--primary);
+  }
+  #gallery-1374 .cs-item:hover .cs-icon-wrapper {
+    border-color: #fff;
+  }
+  #gallery-1374 .cs-item:hover .cs-icon {
+    filter: brightness(1000%) grayscale(1);
+  }
+  #gallery-1374 .cs-picture {
+    width: 100%;
+    /* 344px - 420px */
+    height: clamp(21.5rem, 30vw, 26.25rem);
+    margin: auto;
+    border-radius: 1.5rem;
     display: block;
     position: relative;
+    overflow: hidden;
   }
-  #gallery .cs-picture img {
+  #gallery-1374 .cs-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -390,166 +932,303 @@
     top: 0;
     left: 0;
   }
-  #gallery .cs-row-1 .cs-picture1 {
-    width: 26.25em;
-    height: 35.4375em;
+  #gallery-1374 .cs-item-text {
+    /* 16px - 20px top & bottom, 16px - 40px left & right */
+    padding: clamp(1rem, 2vw, 1.25rem) clamp(1rem, 2.8vw, 2.5rem);
+    background-color: #f7f7f7;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* makes the item text the element that grows to fill the container */
+    flex-grow: 1;
+    gap: 1rem;
+    transition: background-color 0.3s;
   }
-  #gallery .cs-row-1 .cs-picture2 {
-    width: 26.25em;
-    height: 39.3125em;
+  #gallery-1374 .cs-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  #gallery .cs-row-1 .cs-picture3 {
-    width: 26.25em;
-    height: 32em;
+  #gallery-1374 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 1.8vw, 1.5625rem);
+    line-height: 1.2em;
+    text-align: left;
+    margin: 0;
+    color: #1a1a1a;
+    transition: color 0.3s;
   }
-  #gallery .cs-row-2 .cs-picture1 {
-    width: 26.25em;
-    height: 30.75em;
+  #gallery-1374 .cs-desc {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    line-height: 1.5em;
+    color: #1a1a1a;
+    transition: color 0.3s;
   }
-  #gallery .cs-row-2 .cs-picture2 {
-    width: 26.25em;
-    height: 32.3125em;
+  #gallery-1374 .cs-icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid #bababa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents the parent flexbox from shrinking the icon */
+    flex-shrink: 0;
+    transition: border-color 0.3s;
   }
-  #gallery .cs-row-2 .cs-picture3 {
-    width: 26.25em;
-    height: 39.3125em;
+  #gallery-1374 .cs-icon {
+    width: auto;
+    height: 0.75rem;
+    transition: filter 0.3s;
   }
-  #gallery .cs-row-3 .cs-picture1 {
-    width: 26.25em;
-    height: 39.0625em;
+  #gallery-1374 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    overflow: hidden;
+    margin: 0;
+    color: #fff;
+    padding: 0 2rem;
+    border-radius: 1.875rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s;
   }
-  #gallery .cs-row-3 .cs-picture2 {
-    width: 26.25em;
-    height: 28.25em;
+  #gallery-1374 .cs-button-solid:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #000000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
   }
-  #gallery .cs-row-3 .cs-picture3 {
-    width: 26.25em;
-    height: 39.3125em;
+  #gallery-1374 .cs-button-solid:hover {
+    color: var(--primary);
+  }
+  #gallery-1374 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #gallery-1374 .cs-bubbles {
+    width: 25.9375rem;
+    height: 34.125rem;
+    position: absolute;
+    right: -10.25rem;
+    bottom: -2.875rem;
+    z-index: -1;
+  }
+  #gallery-1374 .cs-bubbles:before {
+    /* white border bubble */
+    content: "";
+    width: 21.3125rem;
+    height: 21.3125rem;
+    background: transparent;
+    opacity: 1;
+    border: 1px solid #1a1a1a;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation-name: floatAnimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+  }
+  #gallery-1374 .cs-bubbles:after {
+    /* orange bubble */
+    content: "";
+    width: 21.3125rem;
+    height: 21.3125rem;
+    background: var(--primary);
+    opacity: 0.1;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    animation-name: floatAnimation2;
+    animation-duration: 14s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
   }
 }
-/* Dark mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #gallery .cs-title {
+/* In Between - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #gallery-1374 .cs-item {
+    grid-column: span 6;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #gallery-1374 .cs-title,
+  body.dark-mode #gallery-1374 .cs-text,
+  body.dark-mode #gallery-1374 .cs-h3 {
     color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #gallery-1374 .cs-text {
+    opacity: 0.8;
   }
 }
 /*-- -------------------------- -->
 <---          Reviews           -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
-@media only screen and (min-width: 0em) {
-  #reviews {
-    /* Centers the button */
-    text-align: center;
+@media only screen and (min-width: 0rem) {
+  #reviews-1670 {
     padding: var(--sectionPadding);
+    background-color: #F7F7F7;
   }
-  #reviews .cs-container {
+  #reviews-1670 .cs-container {
     width: 100%;
-    max-width: 69rem;
+    max-width: 80rem;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 40px - 64px */
+    gap: clamp(2.5rem, 4.5vw, 4rem);
   }
-  #reviews .cs-topper {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  #reviews .cs-title {
-    text-align: center;
-    max-width: 43.75rem;
-  }
-  #reviews .cs-text {
-    text-align: center;
-    max-width: 40.625rem;
-    /* 88px - 104px */
-    margin-bottom: clamp(5.5em, 10.2vw, 6.5em);
-  }
-  #reviews .cs-card-group {
-    /* 48px - 64px */
-    margin: 0 auto clamp(3rem, 5vw, 4rem);
-    padding: 0;
-  }
-  #reviews .cs-item {
+  #reviews-1670 .cs-content {
     text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #reviews-1670 .cs-title {
+    margin: 0rem;
+  }
+  #reviews-1670 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  #reviews-1670 .cs-item {
     list-style: none;
     width: 100%;
-    max-width: 33.875rem;
-    margin: 0 auto 4rem;
-    /* Prevents padding from affecting height & width */
+    /* 20px - 40px top & bottom */
+    /* 20px - 40px left & right */
+    padding: clamp(1.25rem, 3.15vw, 2.5rem) clamp(1.25rem, 3.15vw, 2.5rem);
+    background-color: #ffffff;
+    /* prevents padding from adding to height and width */
     box-sizing: border-box;
-    /* Padding L & R - 16px - 32px */
-    padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0;
-    /* 32px - 40px */
-    padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
-    background: #fff;
-    box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
-    border-radius: 0.25rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    grid-column: span 12;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     position: relative;
+    /* 24px - 48px */
+    gap: clamp(1.5rem, 4vw, 3rem);
   }
-  #reviews .cs-item:last-of-type {
-    margin-bottom: 0;
+  #reviews-1670 .cs-flex-group {
+    /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
+    margin-top: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
-  #reviews .cs-item-img {
-    width: 5rem;
-    height: 5rem;
+  #reviews-1670 .cs-profile {
+    width: 3.25rem;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+    display: block;
+  }
+  #reviews-1670 .cs-profile img {
     position: absolute;
-    top: calc(-40 / 16 * 1rem);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes the image behave like a background image */
+    object-fit: cover;
   }
-  #reviews .cs-item-p {
-    font-size: 1rem;
-    line-height: 1.5em;
-    margin: 0 0 1.25rem;
-    padding-bottom: 1.25rem;
-    color: var(--bodyTextColor);
-    border-bottom: 1px solid #e8e9ec;
-  }
-  #reviews .cs-reviewer {
-    font-size: 1rem;
+  #reviews-1670 .cs-name {
+    /* 20px - 25px */
+    font-size: 1.25rem;
+    line-height: 1.2em;
     font-weight: 700;
-    line-height: 1.5em;
-    width: 40%;
-    margin: 0 auto 0 0;
+    margin: 0;
+    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+    margin-top: auto;
     color: var(--headerColor);
     display: block;
   }
-  #reviews .cs-desc {
-    font-size: 0.875rem;
+  #reviews-1670 .cs-job {
+    /* 14px - 16px */
+    font-size: 1rem;
+    line-height: 1.5em;
     font-weight: 400;
-    color: var(#353535);
+    margin: 0;
+    color: var(--bodyTextColor);
     display: block;
   }
-  #reviews .cs-item-stars {
-    width: 6rem;
-    height: 1rem;
+  #reviews-1670 .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #reviews-1670 .cs-item-stars {
+    width: 6.75rem;
+    height: auto;
+  }
+  #reviews-1670 .cs-review {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1.25rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    z-index: 1;
+  }
+  #reviews-1670 .cs-quote {
+    width: 5.375rem;
+    height: auto;
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    z-index: 0;
   }
 }
 /* Tablet - 768px */
-@media only screen and (min-width: 48em) {
-  #reviews .cs-card-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  #reviews .cs-item {
-    /* reset margin so it won't interfere with flexbox */
-    margin: 0;
+@media only screen and (min-width: 48rem) {
+  #reviews-1670 .cs-item {
+    grid-column: span 6;
   }
 }
 /* Dark Mode */
-@media only screen and (min-width: 0em) {
-  body.dark-mode #reviews .cs-title,
-  body.dark-mode #reviews .cs-text,
-  body.dark-mode #reviews .cs-item-p,
-  body.dark-mode #reviews .cs-reviewer {
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #reviews-1670 .cs-title,
+  body.dark-mode #reviews-1670 .cs-review,
+  body.dark-mode #reviews-1670 .cs-name {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #reviews .cs-item {
-    background: var(--medium);
+  body.dark-mode #reviews-1670 .cs-item {
+    background-color: rgba(0, 0, 0, 0.2);
   }
-  body.dark-mode #reviews .cs-desc {
-    color: var(--primaryLight);
+  body.dark-mode #reviews-1670 .cs-job {
+    color: var(--bodyTextColorWhite);
+    opacity: 0.7;
+  }
+  body.dark-mode #reviews-1670 .cs-quote {
+    opacity: 0.2;
   }
 }
