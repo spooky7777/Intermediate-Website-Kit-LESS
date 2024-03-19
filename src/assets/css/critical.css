@@ -331,7 +331,7 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode #hero-1482:before {
     background-color: var(--dark);
-    opacity: 0.94;
+    opacity: 0.5;
   }
   body.dark-mode #hero-1482 .cs-title,
   body.dark-mode #hero-1482 .cs-text {
