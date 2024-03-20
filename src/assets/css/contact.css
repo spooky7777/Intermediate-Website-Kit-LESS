@@ -418,13 +418,16 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #reviews-1670 {
+    background-color: var(--medium);
+  }
   body.dark-mode #reviews-1670 .cs-title,
   body.dark-mode #reviews-1670 .cs-review,
   body.dark-mode #reviews-1670 .cs-name {
-    color: var(--bodyTextColorWhite);
+    color: #ffffff;
   }
   body.dark-mode #reviews-1670 .cs-item {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--dark);
   }
   body.dark-mode #reviews-1670 .cs-job {
     color: var(--bodyTextColorWhite);

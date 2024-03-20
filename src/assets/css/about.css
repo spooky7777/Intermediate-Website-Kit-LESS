@@ -160,6 +160,9 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #sbs-1095 {
+    background-color: var(--dark);
+  }
   body.dark-mode #sbs-1095 .cs-title,
   body.dark-mode #sbs-1095 .cs-text,
   body.dark-mode #sbs-1095 .cs-li,
@@ -262,7 +265,7 @@
     height: 5.5rem;
     /* 16px - 32px */
     margin-bottom: clamp(1rem, 4vw, 2rem);
-    color: var(--primary);
+    color: #fff;
     background-color: var(--secondary);
     border: 1px solid var(--primary);
     border-radius: 50%;
@@ -305,14 +308,17 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #steps-1209 {
+    background-color: var(--medium);
+  }
   body.dark-mode #steps-1209 .cs-title,
   body.dark-mode #steps-1209 .cs-text,
   body.dark-mode #steps-1209 .cs-item-text,
   body.dark-mode #steps-1209 .cs-h3 {
-    color: var(--bodyTextColorWhite);
+    color: #ffff;
   }
   body.dark-mode #steps-1209 .cs-number {
-    color: var(--primaryLight);
+    color: #ffff;
     background-color: var(--medium);
   }
   body.dark-mode #steps-1209 .cs-text,
@@ -747,7 +753,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #pricing-1387 {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--dark);
   }
   body.dark-mode #pricing-1387 .cs-title,
   body.dark-mode #pricing-1387 .cs-text {

@@ -351,9 +351,19 @@
   }
   body.dark-mode #hero-1482:before {
     background: linear-gradient(to right, #000000 0%, #000000 15%, #000000 23%, rgba(0, 0, 0, 0) 100%);
-    opacity: 0.8;
+    opacity: 0.1;
   }
   body.dark-mode #hero-1482 .cs-background {
-    opacity: 0.2;
+    opacity: 0.4;
+  }
+  body.dark-mode #hero-1482 .cs-item {
+    background-color: #071d2d;
+    border-color: #071d2d;
+  }
+  body.dark-mode #hero-1482 .cs-h3 {
+    color: #ffff;
+  }
+  body.dark-mode #hero-1482 .cs-icon {
+    filter: grayscale(1) brightness(1000%);
   }
 }

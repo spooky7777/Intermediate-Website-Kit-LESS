@@ -8,7 +8,7 @@
     /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     --primary: #0077C0;
     --primaryLight: #1A1A1A;
-    --secondary: #ffffff;
+    --secondary: #0077C0;
     --secondaryLight: ##0077C0;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
@@ -1316,7 +1316,7 @@ html {
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #footer-1391 {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #082032;
   }
   body.dark-mode #footer-1391 .cs-logo {
     /* turns logo white */

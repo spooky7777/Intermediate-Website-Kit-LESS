@@ -1082,6 +1082,12 @@
   body.dark-mode #gallery-1374 .cs-text {
     opacity: 0.8;
   }
+  body.dark-mode #gallery-1374 .cs-item-text {
+    background-color: #071d2d;
+  }
+  body.dark-mode #gallery-1374 .cs-desc {
+    color: #ffff;
+  }
 }
 /*-- -------------------------- -->
 <---          Reviews           -->
@@ -1216,13 +1222,16 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #reviews-1670 {
+    background-color: var(--medium);
+  }
   body.dark-mode #reviews-1670 .cs-title,
   body.dark-mode #reviews-1670 .cs-review,
   body.dark-mode #reviews-1670 .cs-name {
-    color: var(--bodyTextColorWhite);
+    color: #ffffff;
   }
   body.dark-mode #reviews-1670 .cs-item {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--dark);
   }
   body.dark-mode #reviews-1670 .cs-job {
     color: var(--bodyTextColorWhite);
