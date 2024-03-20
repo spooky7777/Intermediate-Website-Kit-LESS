@@ -677,6 +677,9 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
+  body.dark-mode #contact-1333 {
+    background-color: #071d2d;
+  }
   body.dark-mode #contact-1333 .cs-title,
   body.dark-mode #contact-1333 .cs-item-p,
   body.dark-mode #contact-1333 .cs-button,
@@ -691,7 +694,7 @@
     opacity: 0.8;
   }
   body.dark-mode #contact-1333 .cs-form {
-    background-color: var(--medium);
+    background-color: var(--dark);
   }
   body.dark-mode #contact-1333 .cs-input {
     background-color: rgba(255, 255, 255, 0.1);
