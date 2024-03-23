@@ -1,15 +1,15 @@
 {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "name": "Great Lakes Web Designs",
+    "email": "info@greatlakeswebdesigns.com",
+    "phoneForTel": "317-989-3905",
+    "phoneFormatted": "(317) 989-3905",
     "address": {
         "lineOne": "First Address Line",
         "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
+        "city": "Indianapolis",
+        "state": "IN",
+        "zip": "46239",
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
-    "domain": "https://www.codestitch.app"
+    "domain": "https://www.greatlakeswebdesigns.com"
 }
