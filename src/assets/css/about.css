@@ -769,7 +769,7 @@
     color: var(--bodyTextColorWhite);
   }
   body.dark-mode #pricing-1387 .cs-flex {
-    background-color: var(--dark);
+    background-color: #033352;
   }
   body.dark-mode #pricing-1387 .cs-ul:before {
     opacity: 0.5;
