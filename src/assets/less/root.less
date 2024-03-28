@@ -1067,27 +1067,16 @@ html {
 }
 
 /* Dark Mode */
-@media only screen and (max-width: 63.9375rem) {
+@media only screen and (min-width: 64rem) {
     body.dark-mode {
         #cs-navigation {
-            background-color: var(--dark);
 
             .cs-logo {
                 /* makes it white */
                 filter: grayscale(1) brightness(1000%);
             }
 
-            .cs-line {
-                background-color: #fff;
-            }
-
-            .cs-ul-wrapper {
-                background-color: var(--medium);
-            }
-
-            .cs-li-link {
-                color: var(--bodyTextColorWhite);
-            }
+            
         }
     }
 }                                
@@ -1264,8 +1253,6 @@ html {
         }
     }
 }
-
-                                
 
 /*-- -------------------------- -->
 <---            CTA             -->
